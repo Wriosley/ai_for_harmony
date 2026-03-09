@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test</title></head>
+<body>
+<h1>Test</h1>
+<script>
+let currentResult = "0";
+let currentExpression = "";
+
+function addNumber(num) {
+    console.log("Before:", currentResult);
+    if (currentResult === "0" && num !== ".") {
+        currentResult = "";
+    }
+    currentResult += num;
+    console.log("After:", currentResult);
+    document.getElementById("result").innerHTML = currentResult;
+}
+</script>
+<button onclick="addNumber(1)">1</button>
+<div id="result">0</div>
+</body>
+</html>
